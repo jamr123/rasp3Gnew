@@ -5,9 +5,9 @@ import config
 import connUbidotsHttp
 import threading
 from threading import Timer
-from time import *
 import math
 import socket
+import time
 
 
 
