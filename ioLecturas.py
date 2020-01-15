@@ -5,7 +5,6 @@ import config
 import connUbidotsHttp
 import threading
 from threading import Timer
-import lcddriver
 from time import *
 import math
 import socket
