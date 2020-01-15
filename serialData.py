@@ -1,6 +1,5 @@
 import time
 import serial
-import httpRequest
 import threading
 import json
 
