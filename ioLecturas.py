@@ -45,8 +45,8 @@ class Data:
         GPIO.add_event_detect(config.CAUDAL_SENSOR_2_GPIO, GPIO.FALLING, callback=self.ISR_caudal_2, bouncetime=1000)
         
         thread = threading.Thread(target=self.calculoCaudales, args=())
-            thread.daemon = True                            
-            thread.start()
+        thread.daemon = True                            
+        thread.start()
 
 
     def cleanUp(self):
