@@ -101,7 +101,7 @@ class Data:
         
     
         
-    def calculoCaudales():
+    def calculoCaudales(self):
         while True:
             print("calculo caudales")
             pulsos=self.countCaudal2
