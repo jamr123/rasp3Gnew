@@ -103,7 +103,7 @@ class Data:
         
     def calculoCaudales():
         while True:
-
+            print("calculo caudales")
             pulsos=self.countCaudal2
             litros=pulsos*config.CAUDAL_SENSOR_2_PULSOS
             caudal=litros/60
