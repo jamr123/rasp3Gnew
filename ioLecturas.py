@@ -44,12 +44,6 @@ class Data:
         GPIO.setup(config.CAUDAL_SENSOR_2_GPIO, GPIO.IN, pull_up_down=GPIO.PUD_UP)
         GPIO.add_event_detect(config.CAUDAL_SENSOR_2_GPIO, GPIO.FALLING, callback=self.ISR_caudal_2, bouncetime=1000)
         
-        GPIO.setup(config.MOTOR_RELAY_1_GPIO, GPIO.OUT)
-        GPIO.setup(config.MOTOR_RELAY_2_GPIO, GPIO.OUT)
-        GPIO.setup(config.MOTOR_SWITCH_1_GPIO, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-        GPIO.add_event_detect(config.MOTOR_SWITCH_1_GPIO, GPIO.FALLING, callback=self.ISR_sw1, bouncetime=1000)
-        GPIO.setup(config.MOTOR_SWITCH_2_GPIO, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-        GPIO.add_event_detect(config.MOTOR_SWITCH_2_GPIO, GPIO.FALLING, callback=self.ISR_sw2, bouncetime=1000)
         thread = threading.Thread(target=self.calculoCaudales, args=())
         thread.daemon = True                            
         thread.start()
