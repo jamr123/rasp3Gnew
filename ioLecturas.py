@@ -106,18 +106,18 @@ class Data:
             print("calculo caudales")
             pulsos=self.countCaudal2
             litros=pulsos*config.CAUDAL_SENSOR_2_PULSOS
-            caudal=litros/60
+            caudal=litros/120
             ubi.lecturas[config.UBIDOTS_SENSOR_CAUDAL_2]=float("{0:.2f}".format(caudal))
             self.countCaudal2=0
 
             pulsos=self.countCaudal1
             litros=pulsos*config.CAUDAL_SENSOR_1_PULSOS
-            caudal=litros/60
+            caudal=litros/120
             ubi.lecturas[config.UBIDOTS_SENSOR_CAUDAL_1]=float("{0:.2f}".format(caudal))
             self.countCaudal1=0
 
 
-            time.sleep(60)
+            time.sleep(120)
 
 
 
