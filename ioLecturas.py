@@ -39,10 +39,10 @@ class Data:
         
         GPIO.setmode(GPIO.BCM)
         GPIO.setup(config.CAUDAL_SENSOR_1_GPIO, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-        GPIO.add_event_detect(config.CAUDAL_SENSOR_1_GPIO, GPIO.FALLING, callback=self.ISR_caudal_1, bouncetime=3000)
+        GPIO.add_event_detect(config.CAUDAL_SENSOR_1_GPIO, GPIO.FALLING, callback=self.ISR_caudal_1, bouncetime=4000)
         
         GPIO.setup(config.CAUDAL_SENSOR_2_GPIO, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-        GPIO.add_event_detect(config.CAUDAL_SENSOR_2_GPIO, GPIO.FALLING, callback=self.ISR_caudal_2, bouncetime=3000)
+        GPIO.add_event_detect(config.CAUDAL_SENSOR_2_GPIO, GPIO.FALLING, callback=self.ISR_caudal_2, bouncetime=4000)
         
         thread = threading.Thread(target=self.calculoCaudales, args=())
         thread.daemon = True                            
